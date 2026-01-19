@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <rect x="98.015" y="225.806" width="275.434" height="52.73" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
-  <rect data-attribute="port" data-attribute-type="in" data-attribute-class="Heating Supply Exit Pipe Inlet Node" data-attribute-id="port-Heating Supply Exit Pipe Inlet Node" x="373.449" y="243.797" width="19.231" height="19.851" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
-  <rect data-attribute="port" data-attribute-type="out" data-attribute-class="HW Supply Outlet Node" data-attribute-id="port-HW Supply Outlet Node" x="75.062" y="240.695" width="22.953" height="19.231" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
-</svg>
