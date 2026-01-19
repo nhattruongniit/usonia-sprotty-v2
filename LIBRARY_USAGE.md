@@ -12,6 +12,79 @@ npm install @usonialab/sprotty-diagram
 <script src="https://unpkg.com/@usonialab/sprotty-diagram/dist/sprotty.min.js"></script>
 ```
 
+**With React + TypeScript:**
+
+```tsx
+import React, { useEffect, useRef, useState } from 'react';
+import { Sprotty } from '@usonialab/sprotty-diagram';
+
+const DiagramComponent: React.FC = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const sprottyRef = useRef<Sprotty | null>(null);
+    const [isInitialized, setIsInitialized] = useState<boolean>(false);
+
+    useEffect(() => {
+        const initSprotty = async () => {
+            try {
+                sprottyRef.current = new Sprotty({
+                    containerId: 'sprotty-container',
+                    initialModel: {
+                        type: 'graph',
+                        id: 'graph',
+                        children: []
+                    }
+                });
+
+                await sprottyRef.current.init();
+                setIsInitialized(true);
+                console.log('Sprotty initialized successfully!');
+            } catch (error) {
+                console.error('Failed to initialize Sprotty:', error);
+            }
+        };
+
+        initSprotty();
+
+        return () => {
+            if (sprottyRef.current) {
+                sprottyRef.current.destroy();
+            }
+        };
+    }, []);
+
+    const addNode = (): void => {
+        if (sprottyRef.current && isInitialized) {
+            sprottyRef.current.createNodeWithPorts({
+                id: `node-${Date.now()}`,
+                x: 100,
+                y: 100,
+                name: 'New Node',
+                size: { width: 120, height: 60 },
+                ports: [
+                    { type: 'input', side: 'left', shape: 'circle' },
+                    { type: 'output', side: 'right', shape: 'circle' }
+                ]
+            });
+        }
+    };
+
+    return (
+        <div>
+            <button onClick={addNode} disabled={!isInitialized}>
+                Add Node
+            </button>
+            <div 
+                id="sprotty-container" 
+                ref={containerRef}
+                style={{ width: '100%', height: '600px', border: '1px solid #ccc' }}
+            />
+        </div>
+    );
+};
+
+export default DiagramComponent;
+```
+
 ## Basic Usage
 
 ### Simple HTML

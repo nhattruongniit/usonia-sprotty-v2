@@ -1,0 +1,27 @@
+body {
+  font-family: Quicksand, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hljs-name, .hljs-quote, .hljs-selector-pseudo, .hljs-selector-tag {
+    color: #22863a;
+}
+
+.hljs {
+    color: #24292e;
+    background: #fff;
+}
+
+.hljs-attr, .hljs-attribute, .hljs-literal, .hljs-meta, .hljs-number, .hljs-operator, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-id, .hljs-variable {
+    color: #005cc5;
+}
+
+code {
+  white-space: break-spaces;
+}

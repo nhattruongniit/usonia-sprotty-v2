@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>Sprotty Diagram - Installation</title>
+  </head>
+  <body>
+    <nav class="bg-white h-full fixed top-0 left-0 border-r border-[#dddddd] overflow-auto z-999 p-4 w-[300px]">
+      <div class="pb-2">
+        <div>Pages</div>
+        <div class="px-4 py-3">
+          <a href="index.html" class="cursor-pointer text-[#3393bd]">Home</a>
+        </div>
+      </div>
+      <div>
+        <div>Engine Usage</div>
+        <div class="px-4 pt-3 pb-2">
+          <a href="installation.html" class="cursor-pointer text-[#3393bd]">Installation</a>
+        </div>
+        <div class="px-4 pb-2">
+          <a href="usage.html" class="cursor-pointer text-[#3393bd]">Usage</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="ml-[300px] px-[20px] py-4">
+      <div>
+        <h1 class="text-[28px] font-weight border-b border-[#dddddd]">Installation</h1>
+        <p class="mt-4">
+          The recommended way to install the engine is to get it as an NPM package. In some cases it's not possible, 
+          so a browser-ready bundle is available for download and add directly to a html file.  
+        </p>
+        
+        <br />
+
+        <h1 class="text-[28px] font-weight border-b border-[#dddddd]">Install as browser-ready bundle</h1>
+        <p class="mt-4">
+          If you cannot use NPM packages, you can download the browser-ready bundle from 
+          <a href="https://unpkg.com/@usonialab/sprotty-diagram/dist/sprotty.min.js" target="_blank" class="cursor-pointer text-[#3393bd]">here</a> 
+          and include it in your HTML file.
+        </p>
+
+        <pre class="h-[100px]">
+          <code class="bg-[#f0f0f0] border-l border-[#3393bd] block p-4"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/@usonialab/sprotty-diagram/dist/sprotty.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code>
+        </pre>
+
+        <br />
+
+        <h1 class="text-[28px] font-weight border-b border-[#dddddd]">Install from NPM</h1>
+        <p class="mt-4">
+          The engine is available as an NPM package. The package itself is an ES6 module, so it can be used with several different bundlers.
+        </p>
+
+        <p class="mt-4">You can install it by running the following command.</p>
+
+        <pre class="h-[100px]">
+          <code class="bg-[#f0f0f0] border-l border-[#3393bd] block p-4">npm install @usonialab/sprotty-diagram</code>
+        </pre>
+
+        <p class="mt-2">After installation you can import it like any other packages.</p>
+        <pre class="h-[100px]">
+          <code class="bg-[#f0f0f0] border-l border-[#3393bd] block p-4">import { Sprotty } from '@usonialab/sprotty-diagram';</code>
+        </pre>
+      </div>
+    </main>
+  </body>
+</html>
