@@ -1,0 +1,40 @@
+# Development files
+node_modules/
+.git/
+.gitignore
+
+# Build outputs (except dist/sprotty.js and sourcemaps)
+dist/assets/
+dist/index.html
+# Note: dist/sprotty.js.map is included via package.json "files" field
+
+# Source files (we only publish lib.ts and types)
+src/index.ts
+src/data.ts
+src/edge-creator.ts
+src/model.ts
+src/port-utils.ts
+src/views.ts
+src/utils/
+src/model/
+src/assets/
+src/styles/
+
+# Development files
+build.js
+tsconfig.json
+index.html
+mocks/
+diagram/
+netlify.toml
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

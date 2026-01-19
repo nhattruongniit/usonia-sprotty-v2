@@ -1,0 +1,1194 @@
+{
+  "type": "graph",
+  "id": "root",
+  "children": [
+    {
+      "type": "node:svg",
+      "id": "Pump:VariableSpeed",
+      "component": {
+        "class_id": 2173,
+        "class_name": "Pump:VariableSpeed",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Coefficient 1 of the Part Load Performance Curve": 0,
+          "Coefficient 2 of the Part Load Performance Curve": 1,
+          "Coefficient 3 of the Part Load Performance Curve": 0,
+          "Coefficient 4 of the Part Load Performance Curve": 0,
+          "Design Maximum Flow Rate": "autosize",
+          "Design Minimum Flow Rate": 0,
+          "Design Power Consumption": "autosize",
+          "Design Pump Head": 179352,
+          "Fraction of Motor Inefficiencies to Fluid Stream": 0,
+          "Inlet Node Name": "HW Supply Inlet Node",
+          "Motor Efficiency": 0.9,
+          "Name": "HW Circ Pump",
+          "Outlet Node Name": "HW Pump Outlet Node",
+          "Pump Control Type": "Intermittent"
+        },
+        "id": 357
+      },
+      "position": {
+        "x": 363.48402432295717,
+        "y": 88.36534818846849
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pump:VariableSpeed",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pump:VariableSpeed-HW Supply Inlet Node",
+          "position": {
+            "x": 139.578,
+            "y": 215.881
+          },
+          "size": {
+            "width": 21.092,
+            "height": 24.814
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "HW Supply Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pump:VariableSpeed-HW Pump Outlet Node",
+          "position": {
+            "x": 308.933,
+            "y": 218.983
+          },
+          "size": {
+            "width": 21.092,
+            "height": 24.194
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "HW Pump Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <ellipse style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\" cx=\"235.112\" cy=\"227.047\" rx=\"73.777\" ry=\"73.777\"></ellipse>\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"HW Supply Inlet Node\" data-attribute-id=\"port-HW Supply Inlet Node\" x=\"139.578\" y=\"215.881\" width=\"21.092\" height=\"24.814\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"HW Pump Outlet Node\" data-attribute-id=\"port-HW Pump Outlet Node\" x=\"308.933\" y=\"218.983\" width=\"21.092\" height=\"24.194\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <path style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\" d=\"M 308.313 228.701 L 185.484 173.49 L 186.724 281.431\"></path>\n  <polyline style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\" points=\"186.724 282.052 308.313 229.322\"></polyline>\n</svg>",
+      "rotation": 0
+    },
+    {
+      "type": "node:svg",
+      "id": "Connector:Splitter",
+      "component": {
+        "class_id": 2158,
+        "class_name": "Connector:Splitter",
+        "document_id": 4,
+        "extension_name": "branches",
+        "extensions": {
+          "branches": [
+            {
+              "Outlet Branch 1 Name": "Central Boiler Branch"
+            },
+            {
+              "Outlet Branch 1 Name": "Heating Supply Bypass Branch"
+            }
+          ]
+        },
+        "fields": {
+          "Inlet Branch Name": "Heating Supply Inlet Branch",
+          "Name": "Heating Supply Splitter"
+        },
+        "id": 349
+      },
+      "position": {
+        "x": 1000,
+        "y": 200
+      },
+      "size": {
+        "width": 1000,
+        "height": 200
+      },
+      "name": "Connector:Splitter",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Connector:Splitter-Heating Supply Inlet Branch",
+          "position": {
+            "x": -22,
+            "y": 110
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Heating Supply Inlet Branch"
+        },
+        {
+          "type": "port:flow",
+          "id": "Connector:Splitter-Central Boiler Branch",
+          "position": {
+            "x": 240,
+            "y": 170
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "Central Boiler Branch"
+        },
+        {
+          "type": "port:flow",
+          "id": "Connector:Splitter-Heating Supply Bypass Branch",
+          "position": {
+            "x": 740,
+            "y": 170
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "Heating Supply Bypass Branch"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"200\" viewBox=\"0 0 1000 200\">\n  <rect x=\"0.0\" y=\"70\" width=\"1000.0\" height=\"100\" style=\"fill:#ccc;stroke:black;stroke-width:2\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Heating Supply Inlet Branch\" data-attribute-id=\"port-Heating Supply Inlet Branch\" x=\"-30.0\" y=\"110.0\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"Central Boiler Branch\" data-attribute-id=\"port-splitter-Central Boiler Branch\" x=\"240.0\" y=\"190\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"Heating Supply Bypass Branch\" data-attribute-id=\"port-splitter-Heating Supply Bypass Branch\" x=\"740.0\" y=\"190\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n</svg>",
+      "rotation": 0
+    },
+    {
+      "type": "node:svg",
+      "id": "Boiler:HotWater",
+      "component": {
+        "class_id": 2189,
+        "class_name": "Boiler:HotWater",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Boiler Flow Mode": "LeavingSetpointModulated",
+          "Boiler Water Inlet Node Name": "Central Boiler Inlet Node",
+          "Boiler Water Outlet Node Name": "Central Boiler Outlet Node",
+          "Design Water Flow Rate": "autosize",
+          "Efficiency Curve Temperature Evaluation Variable": "LeavingBoiler",
+          "Fuel Type": "NaturalGas",
+          "Maximum Part Load Ratio": 1.2,
+          "Minimum Part Load Ratio": 0,
+          "Name": "Central Boiler",
+          "Nominal Capacity": "autosize",
+          "Nominal Thermal Efficiency": 0.8,
+          "Normalized Boiler Efficiency Curve Name": "BoilerEfficiency",
+          "Optimum Part Load Ratio": 1,
+          "Water Outlet Upper Temperature Limit": 100
+        },
+        "id": 354
+      },
+      "position": {
+        "x": 1021.1769079578028,
+        "y": 374.86754488004624
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Boiler:HotWater",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Boiler:HotWater-Central Boiler Inlet Node",
+          "position": {
+            "x": 219.603,
+            "y": 162
+          },
+          "size": {
+            "width": 30,
+            "height": 30
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Central Boiler Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Boiler:HotWater-Central Boiler Outlet Node",
+          "position": {
+            "x": 216.501,
+            "y": 340.64
+          },
+          "size": {
+            "width": 30,
+            "height": 30
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "Central Boiler Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"101.117\" y=\"193.617\" width=\"267.99\" height=\"148.263\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Central Boiler Inlet Node\" data-attribute-id=\"port-Central Boiler Inlet Node\" x=\"219.603\" y=\"167.563\" width=\"30.397\" height=\"25.434\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"Central Boiler Outlet Node\" data-attribute-id=\"port-Central Boiler Outlet Node\" x=\"216.501\" y=\"340.64\" width=\"33.499\" height=\"27.916\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 30.4262px; white-space: pre;\" transform=\"matrix(1.046004, 0, 0, 1.051725, -5.671626, -12.440201)\" x=\"109.801\" y=\"281.707\"> Boiler</text>\n</svg>",
+      "rotation": 0
+    },
+    {
+      "type": "node:svg",
+      "id": "Pipe:Adiabatic",
+      "component": {
+        "class_id": 2164,
+        "class_name": "Pipe:Adiabatic",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Inlet Node Name": "Heating Supply Bypass Inlet Node",
+          "Name": "Heating Supply Side Bypass",
+          "Outlet Node Name": "Heating Supply Bypass Outlet Node"
+        },
+        "id": 329
+      },
+      "position": {
+        "x": 1496.756929670968,
+        "y": 373.4075560355038
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pipe:Adiabatic",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-Heating Supply Bypass Inlet Node",
+          "position": {
+            "x": 244.107,
+            "y": 107.00999999999999
+          },
+          "size": {
+            "width": 19.231,
+            "height": 19.851
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Heating Supply Bypass Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-Heating Supply Bypass Outlet Node",
+          "position": {
+            "x": 238.834,
+            "y": 403.846
+          },
+          "size": {
+            "width": 22.953,
+            "height": 19.231
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "Heating Supply Bypass Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <g>\n    <rect x=\"98.015\" y=\"225.806\" width=\"275.434\" height=\"52.73\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Heating Supply Bypass Inlet Node\" data-attribute-id=\"port-Heating Supply Bypass Inlet Node\" x=\"373.449\" y=\"243.797\" width=\"19.231\" height=\"19.851\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"Heating Supply Bypass Outlet Node\" data-attribute-id=\"port-Heating Supply Bypass Outlet Node\" x=\"75.062\" y=\"240.695\" width=\"22.953\" height=\"19.231\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  </g>\n</svg>",
+      "rotation": -90
+    },
+    {
+      "type": "node:svg",
+      "id": "Connector:Mixer",
+      "component": {
+        "class_id": 2159,
+        "class_name": "Connector:Mixer",
+        "document_id": 4,
+        "extension_name": "branches",
+        "extensions": {
+          "branches": [
+            {
+              "Inlet Branch 1 Name": "Central Boiler Branch"
+            },
+            {
+              "Inlet Branch 1 Name": "Heating Supply Bypass Branch"
+            }
+          ]
+        },
+        "fields": {
+          "Name": "Heating Supply Mixer",
+          "Outlet Branch Name": "Heating Supply Outlet Branch"
+        },
+        "id": 350
+      },
+      "position": {
+        "x": 1004.7799210805825,
+        "y": 838.6177113368947
+      },
+      "size": {
+        "width": 1000,
+        "height": 200
+      },
+      "name": "Connector:Mixer",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Connector:Mixer-Central Boiler Branch",
+          "position": {
+            "x": 240,
+            "y": 47
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Central Boiler Branch"
+        },
+        {
+          "type": "port:flow",
+          "id": "Connector:Mixer-Heating Supply Bypass Branch",
+          "position": {
+            "x": 740,
+            "y": 47
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Heating Supply Bypass Branch"
+        },
+        {
+          "type": "port:flow",
+          "id": "Connector:Mixer-Heating Supply Outlet Branch",
+          "position": {
+            "x": -20,
+            "y": 110
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "Heating Supply Outlet Branch"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"200\" viewBox=\"0 0 1000 200\">\n  <rect x=\"0.0\" y=\"70\" width=\"1000.0\" height=\"100\" style=\"fill:#ccc;stroke:black;stroke-width:2\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Central Boiler Branch\" data-attribute-id=\"port-mixer-Central Boiler Branch\" x=\"240.0\" y=\"30\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Heating Supply Bypass Branch\" data-attribute-id=\"port-mixer-Heating Supply Bypass Branch\" x=\"740.0\" y=\"30\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"Heating Supply Outlet Branch\" data-attribute-id=\"port-Heating Supply Outlet Branch\" x=\"-30.0\" y=\"110.0\" width=\"20\" height=\"20\" style=\"fill:#ddd;stroke:black\" />\n</svg>",
+      "rotation": 0
+    },
+    {
+      "type": "node:svg",
+      "id": "Pipe:Adiabatic-331",
+      "component": {
+        "class_id": 2164,
+        "class_name": "Pipe:Adiabatic",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Inlet Node Name": "Heating Supply Exit Pipe Inlet Node",
+          "Name": "Heating Supply Outlet",
+          "Outlet Node Name": "HW Supply Outlet Node"
+        },
+        "id": 331
+      },
+      "position": {
+        "x": 369.92579526900016,
+        "y": 704.3518311643563
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pipe:Adiabatic-331",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-331-Heating Supply Exit Pipe Inlet Node",
+          "position": {
+            "x": 373.449,
+            "y": 243.797
+          },
+          "size": {
+            "width": 19.231,
+            "height": 19.851
+          },
+          "shape": "square",
+          "portType": "input",
+          "label": "Heating Supply Exit Pipe Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-331-HW Supply Outlet Node",
+          "position": {
+            "x": 75.062,
+            "y": 240.695
+          },
+          "size": {
+            "width": 22.953,
+            "height": 19.231
+          },
+          "shape": "square",
+          "portType": "output",
+          "label": "HW Supply Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"98.015\" y=\"225.806\" width=\"275.434\" height=\"52.73\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-type=\"in\" data-attribute-class=\"Heating Supply Exit Pipe Inlet Node\" data-attribute-id=\"port-Heating Supply Exit Pipe Inlet Node\" x=\"373.449\" y=\"243.797\" width=\"19.231\" height=\"19.851\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-type=\"out\" data-attribute-class=\"HW Supply Outlet Node\" data-attribute-id=\"port-HW Supply Outlet Node\" x=\"75.062\" y=\"240.695\" width=\"22.953\" height=\"19.231\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n</svg>",
+      "rotation": 0
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-357-349",
+      "sourceId": "Pump:VariableSpeed-HW Pump Outlet Node",
+      "targetId": "Connector:Splitter-Heating Supply Inlet Branch"
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-358",
+      "sourceId": "Connector:Splitter-Central Boiler Branch",
+      "targetId": "Boiler:HotWater-Central Boiler Inlet Node"
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-359",
+      "sourceId": "Boiler:HotWater-Central Boiler Outlet Node",
+      "targetId": "Connector:Mixer-Central Boiler Branch"
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-360",
+      "sourceId": "Pipe:Adiabatic-Heating Supply Bypass Outlet Node",
+      "targetId": "Connector:Mixer-Heating Supply Bypass Branch"
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-361",
+      "sourceId": "Connector:Splitter-Heating Supply Bypass Branch",
+      "targetId": "Pipe:Adiabatic-Heating Supply Bypass Inlet Node"
+    },
+    {
+      "type": "edge:flow",
+      "id": "edge-362",
+      "sourceId": "Connector:Mixer-Heating Supply Outlet Branch",
+      "targetId": "Pipe:Adiabatic-331-Heating Supply Exit Pipe Inlet Node"
+    },
+    {
+      "type": "node:svg",
+      "id": "Pipe:Adiabatic-335",
+      "component": {
+        "class_id": 2164,
+        "class_name": "Pipe:Adiabatic",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Inlet Node Name": "HW Demand Inlet Node",
+          "Name": "Heating Demand Inlet Pipe",
+          "Outlet Node Name": "HW Demand Entrance Pipe Outlet Node"
+        },
+        "id": 335
+      },
+      "position": {
+        "x": -243.22530052190723,
+        "y": 680.2545019457466
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pipe:Adiabatic-335",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-335-HW Demand Inlet Node",
+          "position": {
+            "x": 373.449,
+            "y": 243.797
+          },
+          "size": {
+            "width": 19.231,
+            "height": 19.851
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "HW Demand Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-335-HW Demand Entrance Pipe Outlet Node",
+          "position": {
+            "x": 75.062,
+            "y": 240.695
+          },
+          "size": {
+            "width": 22.953,
+            "height": 19.231
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "HW Demand Entrance Pipe Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"98.015\" y=\"225.806\" width=\"275.434\" height=\"52.73\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"HW Demand Inlet Node\" data-attribute-id=\"port-HW Demand Inlet Node\" data-attribute-type=\"in\" x=\"373.449\" y=\"243.797\" width=\"19.231\" height=\"19.851\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"HW Demand Entrance Pipe Outlet Node\" data-attribute-id=\"port-HW Demand Entrance Pipe Outlet Node\" data-attribute-type=\"out\" x=\"75.062\" y=\"240.695\" width=\"22.953\" height=\"19.231\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Pipe:Adiabatic-id:346",
+      "component": {
+        "class_id": 2164,
+        "class_name": "Pipe:Adiabatic",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Inlet Node Name": "Heating Demand Bypass Inlet Node",
+          "Name": "Heating Demand Bypass",
+          "Outlet Node Name": "Heating Demand Bypass Outlet Node"
+        },
+        "id": 346
+      },
+      "position": {
+        "x": -246.21577832398705,
+        "y": 365.1682033994284
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pipe:Adiabatic-id:346",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-id:346-Heating Demand Bypass Inlet Node",
+          "position": {
+            "x": 373.449,
+            "y": 243.797
+          },
+          "size": {
+            "width": 19.231,
+            "height": 19.851
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "Heating Demand Bypass Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-id:346-Heating Demand Bypass Outlet Node",
+          "position": {
+            "x": 75.062,
+            "y": 240.695
+          },
+          "size": {
+            "width": 22.953,
+            "height": 19.231
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "Heating Demand Bypass Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <g>\n    <rect x=\"98.015\" y=\"225.806\" width=\"275.434\" height=\"52.73\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-class=\"Heating Demand Bypass Inlet Node\" data-attribute-id=\"port-Heating Demand Bypass Inlet Node\" data-attribute-type=\"in\" x=\"373.449\" y=\"243.797\" width=\"19.231\" height=\"19.851\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-class=\"Heating Demand Bypass Outlet Node\" data-attribute-id=\"port-Heating Demand Bypass Outlet Node\" data-attribute-type=\"out\" x=\"75.062\" y=\"240.695\" width=\"22.953\" height=\"19.231\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  </g>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Pipe:Adiabatic-id:337",
+      "component": {
+        "class_id": 2164,
+        "class_name": "Pipe:Adiabatic",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Inlet Node Name": "HW Demand Exit Pipe Inlet Node",
+          "Name": "Heating Demand Outlet Pipe",
+          "Outlet Node Name": "HW Demand Outlet Node"
+        },
+        "id": 337
+      },
+      "position": {
+        "x": -242.38429305939718,
+        "y": 59.81520317167542
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Pipe:Adiabatic-id:337",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-id:337-HW Demand Exit Pipe Inlet Node",
+          "position": {
+            "x": 373.449,
+            "y": 243.797
+          },
+          "size": {
+            "width": 19.231,
+            "height": 19.851
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "HW Demand Exit Pipe Inlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Pipe:Adiabatic-id:337-HW Demand Outlet Node",
+          "position": {
+            "x": 75.062,
+            "y": 240.695
+          },
+          "size": {
+            "width": 22.953,
+            "height": 19.231
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "HW Demand Outlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <g>\n    <rect x=\"98.015\" y=\"225.806\" width=\"275.434\" height=\"52.73\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-class=\"HW Demand Exit Pipe Inlet Node\" data-attribute-id=\"port-HW Demand Exit Pipe Inlet Node\" data-attribute-type=\"in\" x=\"373.449\" y=\"243.797\" width=\"19.231\" height=\"19.851\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n    <rect data-attribute=\"port\" data-attribute-class=\"HW Demand Outlet Node\" data-attribute-id=\"port-HW Demand Outlet Node\" data-attribute-type=\"out\" x=\"75.062\" y=\"240.695\" width=\"22.953\" height=\"19.231\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  </g>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:310",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "Main Cooling Coil 1 Outlet Node",
+          "Air Outlet Node Name": "Main Heating Coil 1 Outlet Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "Main Heating Coil 1",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "Main Heating Coil 1 Water Inlet Node",
+          "Water Outlet Node Name": "Main Heating Coil 1 Water Outlet Node"
+        },
+        "id": 310
+      },
+      "position": {
+        "x": -783.9785322474219,
+        "y": 360.0699150667075
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:310",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "svg-imported-1767707455188-Main Heating Coil 1 Water Outlet Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "Main Heating Coil 1 Water Outlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "svg-imported-1767707455188-Main Heating Coil 1 Water Inlet Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "Main Heating Coil 1 Water Inlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"Main Heating Coil 1 Water Outlet Node\" data-attribute-id=\"port-Main Heating Coil 1 Water Outlet Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"Main Heating Coil 1 Water Inlet Node\" data-attribute-id=\"port-Main Heating Coil 1 Water Inlet Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:306",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "Outside Air Inlet Node 1",
+          "Air Outlet Node Name": "OA Heating Coil 1 Air Outlet Node",
+          "Availability Schedule Name": "CoolingCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "OA Heating Coil 1",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "OA Heating Coil 1 Water Inlet Node",
+          "Water Outlet Node Name": "OA Heating Coil 1 Water Outlet Node"
+        },
+        "id": 306
+      },
+      "position": {
+        "x": -1193.508034294599,
+        "y": 351.67830762621406
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:306",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:306-OA Heating Coil 1 Water Outlet Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "OA Heating Coil 1 Water Outlet Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:306-OA Heating Coil 1 Water Inlet Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "OA Heating Coil 1 Water Inlet Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"OA Heating Coil 1 Water Outlet Node\" data-attribute-id=\"port-OA Heating Coil 1 Water Outlet Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"OA Heating Coil 1 Water Inlet Node\" data-attribute-id=\"port-OA Heating Coil 1 Water Inlet Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:292",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "SPACE5-1 Zone Coil Air In Node",
+          "Air Outlet Node Name": "SPACE5-1 In Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "SPACE5-1 Zone Coil",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "SPACE5-1 Zone Coil Water In Node",
+          "Water Outlet Node Name": "SPACE5-1 Zone Coil Water Out Node"
+        },
+        "id": 292
+      },
+      "position": {
+        "x": -1569.6324671667296,
+        "y": 348.7330910341803
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:292",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:292-SPACE5-1 Zone Coil Water Out Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "SPACE5-1 Zone Coil Water Out Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:292-SPACE5-1 Zone Coil Water In Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "SPACE5-1 Zone Coil Water In Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE5-1 Zone Coil Water Out Node\" data-attribute-id=\"port-SPACE5-1 Zone Coil Water Out Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE5-1 Zone Coil Water In Node\" data-attribute-id=\"port-SPACE5-1 Zone Coil Water In Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:291",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "SPACE4-1 Zone Coil Air In Node",
+          "Air Outlet Node Name": "SPACE4-1 In Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "SPACE4-1 Zone Coil",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "SPACE4-1 Zone Coil Water In Node",
+          "Water Outlet Node Name": "SPACE4-1 Zone Coil Water Out Node"
+        },
+        "id": 291
+      },
+      "position": {
+        "x": -1991.7251107039074,
+        "y": 341.8821317856004
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:291",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:291-SPACE4-1 Zone Coil Water Out Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "SPACE4-1 Zone Coil Water Out Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:291-SPACE4-1 Zone Coil Water In Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "SPACE4-1 Zone Coil Water In Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE4-1 Zone Coil Water Out Node\" data-attribute-id=\"port-SPACE4-1 Zone Coil Water Out Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE4-1 Zone Coil Water In Node\" data-attribute-id=\"port-SPACE4-1 Zone Coil Water In Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:290",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "SPACE3-1 Zone Coil Air In Node",
+          "Air Outlet Node Name": "SPACE3-1 In Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "SPACE3-1 Zone Coil",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "SPACE3-1 Zone Coil Water In Node",
+          "Water Outlet Node Name": "SPACE3-1 Zone Coil Water Out Node"
+        },
+        "id": 290
+      },
+      "position": {
+        "x": -2394.2079725730287,
+        "y": 340.32881482230067
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:290",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:290-SPACE3-1 Zone Coil Water Out Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "SPACE3-1 Zone Coil Water Out Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:290-SPACE3-1 Zone Coil Water In Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "SPACE3-1 Zone Coil Water In Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE3-1 Zone Coil Water Out Node\" data-attribute-id=\"port-SPACE3-1 Zone Coil Water Out Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE3-1 Zone Coil Water In Node\" data-attribute-id=\"port-SPACE3-1 Zone Coil Water In Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:289",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "SPACE2-1 Zone Coil Air In Node",
+          "Air Outlet Node Name": "SPACE2-1 In Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "SPACE2-1 Zone Coil",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "SPACE2-1 Zone Coil Water In Node",
+          "Water Outlet Node Name": "SPACE2-1 Zone Coil Water Out Node"
+        },
+        "id": 289
+      },
+      "position": {
+        "x": -2770.767942641036,
+        "y": 337.7484534561006
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:289",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:289-SPACE2-1 Zone Coil Water Out Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "SPACE2-1 Zone Coil Water Out Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:289-SPACE2-1 Zone Coil Water In Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "SPACE2-1 Zone Coil Water In Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE2-1 Zone Coil Water Out Node\" data-attribute-id=\"port-SPACE2-1 Zone Coil Water Out Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE2-1 Zone Coil Water In Node\" data-attribute-id=\"port-SPACE2-1 Zone Coil Water In Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    },
+    {
+      "type": "node:svg",
+      "id": "Coil:Heating:Water-id:288",
+      "component": {
+        "class_id": 2085,
+        "class_name": "Coil:Heating:Water",
+        "document_id": 4,
+        "extension_name": null,
+        "extensions": {},
+        "fields": {
+          "Air Inlet Node Name": "SPACE1-1 Zone Coil Air In Node",
+          "Air Outlet Node Name": "SPACE1-1 In Node",
+          "Availability Schedule Name": "ReheatCoilAvailSched",
+          "Design Water Temperature Difference": 11,
+          "Maximum Water Flow Rate": "autosize",
+          "Name": "SPACE1-1 Zone Coil",
+          "Performance Input Method": "UFactorTimesAreaAndDesignWaterFlowRate",
+          "Rated Capacity": "autosize",
+          "Rated Inlet Air Temperature": 16.6,
+          "Rated Inlet Water Temperature": 82.2,
+          "Rated Outlet Air Temperature": 32.2,
+          "Rated Outlet Water Temperature": 71.1,
+          "U-Factor Times Area Value": "autosize",
+          "Water Inlet Node Name": "SPACE1-1 Zone Coil Water In Node",
+          "Water Outlet Node Name": "SPACE1-1 Zone Coil Water Out Node"
+        },
+        "id": 288
+      },
+      "position": {
+        "x": -3139.9802837821717,
+        "y": 336.065037232226
+      },
+      "size": {
+        "width": 500,
+        "height": 500
+      },
+      "name": "Coil:Heating:Water-id:288",
+      "children": [
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:288-SPACE1-1 Zone Coil Water Out Node",
+          "position": {
+            "x": 217.742,
+            "y": 150.124
+          },
+          "size": {
+            "width": 31.638,
+            "height": 26.675
+          },
+          "shape": "square",
+          "portType": "output",
+          "side": "right",
+          "label": "SPACE1-1 Zone Coil Water Out Node"
+        },
+        {
+          "type": "port:flow",
+          "id": "Coil:Heating:Water-id:288-SPACE1-1 Zone Coil Water In Node",
+          "position": {
+            "x": 218.362,
+            "y": 350.496
+          },
+          "size": {
+            "width": 32.258,
+            "height": 26.055
+          },
+          "shape": "square",
+          "portType": "input",
+          "side": "left",
+          "label": "SPACE1-1 Zone Coil Water In Node"
+        }
+      ],
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 500\">\n  <rect x=\"143.921\" y=\"177.419\" width=\"183.623\" height=\"173.697\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE1-1 Zone Coil Water Out Node\" data-attribute-id=\"port-SPACE1-1 Zone Coil Water Out Node\" data-attribute-type=\"out\" x=\"217.742\" y=\"150.124\" width=\"31.638\" height=\"26.675\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <rect data-attribute=\"port\" data-attribute-class=\"SPACE1-1 Zone Coil Water In Node\" data-attribute-id=\"port-SPACE1-1 Zone Coil Water In Node\" data-attribute-type=\"in\" x=\"218.362\" y=\"350.496\" width=\"32.258\" height=\"26.055\" style=\"fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);\"></rect>\n  <text style=\"white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px;\" x=\"171.216\" y=\"229.529\">Heating <tspan x=\"171.21600341796875\" dy=\"1em\">​</tspan> Coil </text>\n</svg>",
+      "rotation": 0,
+      "flipHorizontal": null,
+      "flipVertical": null
+    }
+  ]
+}

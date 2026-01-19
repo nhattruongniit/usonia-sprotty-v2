@@ -1,0 +1,15 @@
+<!-- 
+        Boiler:HotWater
+    	-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <rect x="101.117" y="193.617" width="267.99" height="148.263" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
+  <rect data-attribute="port" data-attribute-class="a1" data-attribute-id="port-a1" x="219.603" y="167.563" width="30.397" height="25.434" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
+  <rect data-attribute="port" data-attribute-class="a2" data-attribute-id="port-a2" x="216.501" y="340.64" width="33.499" height="27.916" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Arial&quot;, sans-serif; font-size: 30.4262px; white-space: pre;" transform="matrix(1.046004, 0, 0, 1.051725, -5.671626, -12.440201)" x="109.801" y="281.707">          Boiler</text>
+</svg>
+
+<!-- 
+        Port 1: up: inlet from Central Boiler Inlet Node
+        Port 2: down: outlet to Central Boiler Outlet Node
+    	-->

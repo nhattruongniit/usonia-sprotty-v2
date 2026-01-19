@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewBox="0 0 1000 200">
+  <rect x="0.0" y="70" width="1000.0" height="100" style="fill:#ccc;stroke:black;stroke-width:2" />
+  <rect data-attribute="port" data-attribute-type="in" data-attribute-class="Heating Supply Inlet Branch" data-attribute-id="port-Heating Supply Inlet Branch" x="-30.0" y="110.0" width="20" height="20" style="fill:#ddd;stroke:black" />
+  <rect data-attribute="port" data-attribute-type="out" data-attribute-class="Central Boiler Branch" data-attribute-id="port-splitter-Central Boiler Branch" x="240.0" y="190" width="20" height="20" style="fill:#ddd;stroke:black" />
+  <rect data-attribute="port" data-attribute-type="out" data-attribute-class="Heating Supply Bypass Branch" data-attribute-id="port-splitter-Heating Supply Bypass Branch" x="740.0" y="190" width="20" height="20" style="fill:#ddd;stroke:black" />
+</svg>
